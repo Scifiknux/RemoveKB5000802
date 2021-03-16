@@ -11,4 +11,4 @@ Although it's best to utilize mass management tools like PDQ Deploy, I hope this
 
 Troubleshooting:
 
-The only depencies are SysteminternalsSuite (please refer to HOW TO USE above) and the target computer must have permission to run unsigned Powershell scripts. Line 1 in Files/RemoveKB5000802.ps1 should take care of this, but you may need to run "set-executionpolicy remotesigned" in elevated Powershell if you run into any issues.
+The only depencies aside from admin privileges and both computers being on the same domain are SysteminternalsSuite (please refer to HOW TO USE above) and the target computer must have permission to run unsigned Powershell scripts. Line 1 in Files/RemoveKB5000802.ps1 should take care of this, but you may need to run "set-executionpolicy remotesigned" in elevated Powershell if you run into any issues.
