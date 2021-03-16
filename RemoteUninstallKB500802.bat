@@ -35,6 +35,8 @@ if %errorlevel% == 0 (
     GOTO:notfound
     )
 :found
+echo Please enter your domain name:
+set /p domain=
 echo Please enter your admin username:
 set /p user=
 xcopy "%~dp0\Files\*.*" \\%address%\c$\Temp\RemoveKB5000802 /e /i /y
@@ -44,7 +46,7 @@ ECHO Remote KB500802 Uninstall - %address%
 ECHO ============================
 ECHO ____________________________
 echo [41mThis will take a long time. Please do not close this window until the script finishes.[0m
-PSTools\psexec \\%address% -u deervalley\%user% -s PowerShell "C:\Temp\RemoveKB5000802\removeKB5000802.ps1"
+SysinternalsSuite\psexec \\%address% -u %domain%\%user% -s PowerShell "C:\Temp\RemoveKB5000802\removeKB5000802.ps1"
 @RD /S /Q "\\%address%\c$\Temp\RemoveKB5000802"
 echo All done!
 pause
