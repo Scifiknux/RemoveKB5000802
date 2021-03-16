@@ -1,3 +1,4 @@
+set-executionpolicy remotesigned
 $SearchUpdates = dism /online /get-packages | findstr "Package_for"
 $updateName = $SearchUpdates.replace("Package Identity : ", "")
 $updates =  $updateName | findstr "19041.867"
