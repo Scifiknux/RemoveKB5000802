@@ -8,3 +8,7 @@ HOW TO USE:
 Pretty straight forward, eh? Run this script and it'll prompt you for an IP address or hostname. After verifying the device is online, it will see if KB5000802 is installed. If it is, it'll uninstall it after asking for domain name and credentials.
 
 Although it's best to utilize mass management tools like PDQ Deploy, I hope this helps someone. Feel free to copy and modify to meet your needs.
+
+Troubleshooting:
+
+The only depencies are SysteminternalsSuite (please refer to HOW TO USE above) and the target computer must have permission to run unsigned Powershell scripts. Line 1 in Files/RemoveKB5000802.ps1 should take care of this, but you may need to run "set-executionpolicy remotesigned" in elevated Powershell if you run into any issues.
